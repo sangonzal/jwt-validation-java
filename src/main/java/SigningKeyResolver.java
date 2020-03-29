@@ -31,7 +31,7 @@ public class SigningKeyResolver extends SigningKeyResolverAdapter {
             }
         }
 
-        throw new RuntimeException("Signature validation failed");
+        throw new JwtValidationException("Signature validation failed: Could not find a key with matching kid");
     }
 
     private AADKeySet getSigningKeys(String authority)throws Exception {
@@ -78,7 +78,7 @@ public class SigningKeyResolver extends SigningKeyResolverAdapter {
             KeyFactory factory = KeyFactory.getInstance("RSA");
             return factory.generatePublic(publicSpec);
         } catch(Exception e){
-            throw new RuntimeException("Key generation failed", e);
+            throw new JwtValidationException("Key generation failed", e);
         }
     }
 }
