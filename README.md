@@ -1,2 +1,3 @@
 # jwt-validation-java
-Sample showing how to validate a JWT signed by Azure Active Directory in Java 
+
+Code for: https://sgonzal.com/2020/03/28/jwt-validation.html 
