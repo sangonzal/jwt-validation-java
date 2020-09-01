@@ -4,7 +4,6 @@ on:
   schedule: 
     - cron: "0 0 * * *"
   
-  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "traffic"
@@ -20,7 +19,7 @@ jobs:
     # Calculates traffic and clones and stores in CSV file
     - name: Repository Traffic 
       id: traffic
-      uses: sangonzal/repository-traffic-action@v0.1.0
+      uses: sangonzal/repository-traffic-action@72990a8
       env:
         TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }} 
       
