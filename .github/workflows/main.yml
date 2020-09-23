@@ -19,7 +19,7 @@ jobs:
     # Calculates traffic and clones and stores in CSV file
     - name: Repository Traffic 
       id: traffic
-      uses: sangonzal/repository-traffic-action@2293c8d
+      uses: sangonzal/repository-traffic-action@a0d72e4
       env:
         TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }} 
       
